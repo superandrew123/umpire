@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="main.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="jquery.jrumble.1.3.min.js"></script>
+	<script src="jquery.mobile.custom.min.js"></script>
+   	<script src="app.js"></script>
+   	<title>Andrew's Umpire Tool</title>
+   	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+	<div class="splash" style="display: none;">
+
+			<input id="homeInput" class="topInput" type="text" name="homeT" value="Home"><br>
+			<input id="awayInput"class="bottomInput" type="text" name="awayT" value="Away"><br>	
+		
+		<div class="nameSubmit">SUBMIT</div>
+	</div>
+	<div class="umpCount">
+	
+		<div class="firstRow">
+			<div class="strikesTr">Strikes
+				<p class="strikes">0</p>
+			</div>
+			<div class="ballsTr">Balls
+				<p class="balls">0</p>
+			</div>
+			<div class="clear">CLEAR
+			</div>
+		</div>
+	<table>
+		<tr>
+			<td class="outsTr">OUTS
+				<p class="outs">0</p>
+			</td>					
+			<td class="inningTr">INNING
+				<p class="inning">0</p>
+			</td>
+
+		</tr>
+		<tr>
+			<td class="awaySTr"><p class="away names">Away</p>
+				<p class="awayS score">0</p>
+			</td>			
+			<td class="homeSTr"><p class="home names">Home</p>
+				<p class="homeS score">0</p>
+			</td>
+
+		</tr>
+
+		
+		<tr>
+			<td class="reset">RESET</td>
+			<td class="enterNames">Name<br> Teams</td>
+		</tr>
+	</table>
+	</div>
+
+
+
+ 
+
+</body>
