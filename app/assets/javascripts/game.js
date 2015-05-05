@@ -112,6 +112,7 @@ var main = function() {
 				inning[0] = "Top ";
 				inning[1]++;
 				$(".inning").html(inning);
+				saveInning();
 			};
 		outs = 0;
 		$(".outs").html(outs);

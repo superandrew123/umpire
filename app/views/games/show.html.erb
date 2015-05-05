@@ -1,0 +1,37 @@
+<div id="<%= @game.id %>"class="umpCount">
+	<div class="firstRow">
+		<div class="strikesTr">Strikes
+			<p class="strikes"></p>
+		</div>
+		<div class="ballsTr">Balls
+			<p class="balls">0</p>
+		</div>
+		<div class="clear">CLEAR
+		</div>
+	</div>
+<table>
+	<tr>
+		<td class="outsTr">OUTS
+			<p class="outs">0</p>
+		</td>					
+		<td class="inningTr">INNING
+			<p class="inning"><%= @game.display_inning %></p>
+		</td>
+	</tr>
+	<tr>
+		<td class="awaySTr"><p class="away names"><%= @game.away_name %></p>
+			<p class="awayS score"><%= @game.home_score %></p>
+		</td>			
+		<td class="homeSTr"><p class="home names"><%= @game.home_name %></p>
+			<p class="homeS score"><%= @game.away_score %></p>
+		</td>
+
+	</tr>
+
+	
+	<tr>
+		<td class="reset">RESET</td>
+		<td class="enterNames">Name<br> Teams</td>
+	</tr>
+</table>
+</div>
