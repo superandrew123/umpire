@@ -1,16 +1,20 @@
-
 $(document).ready(function(){
+	checkNames();
 	setListeners();
 });
 
-
+function checkNames(){
+	// Check length of name and shorten if it's too much
+	
+};
 
 function setListeners(){
-	$(".strikesBox").click(tapStrike);
-	$(".clear").click(tapClear);
-	$(".outsBox").click(tapOut);
-	$(".awayBox").click(tapAway);
-	$(".homeBox").click(tapHome);
+	$(".strikesBox").on("tap", tapStrike);
+	$(".clear").on("tap", tapClear);
+	$(".outsBox").on("tap", tapOut);
+	$(".awayBox").on("tap", tapAway);
+	$(".homeBox").on("tap", tapHome);
+	$(".deleteGame h3").click(destroyGame);
 };
 
 function tapStrike(){

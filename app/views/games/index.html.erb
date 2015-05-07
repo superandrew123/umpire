@@ -1,30 +1,30 @@
 <div class="container">
 	<div>
 	<% if current_user %>
-		<%= link_to "log out", destroy_user_session_path, method: :delete%>
+		<%= link_to "log out", destroy_user_session_path, method: :delete %>
 	<% end %>
 	</div>
 	<div>
 		<%= link_to("New Game", new_game_path) %>
 	</div>
 	<h3>Games: </h3>
-	<table>
-		<tr>
-			<th>Home Team</th>
-			<th>Away Team</th>
-			<th></th>
-		</tr>		
+	<table>	
 		<% @games.each do |game| %>
+		<tr>
+		<table id=<%= game.id %> class="gameData">
 			<tr>
 				<td><%= game.home_name %></td>
 				<td><%= game.away_name %></td>
 				<td><%= link_to("Resume", game_path(game)) %></td>
+				<td class="deleteGame" rowspan="2"><a><h3> X </h3></a></td>
 			</tr>
 			<tr>
 				<td><%= game.home_score %></td>
 				<td><%= game.away_score %></td>
 				<td><%= game.display_inning %></td>
 			</tr>
+		</table>
+		</tr>
 		<% end %>
 	</table>	
 

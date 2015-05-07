@@ -10,3 +10,15 @@ function saveInning(game){
 		data: data
 	});
 }
+
+function destroyGame(){
+	var $table = $(this).parents().eq(4)
+	var url = "/games/" + $('.gameData').attr("id");
+	var method = "DELETE";
+	$.ajax(url, {
+		method: method,
+		complete: function(){
+			$table.remove();
+		}
+	});
+}
