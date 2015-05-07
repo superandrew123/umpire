@@ -1,9 +1,9 @@
-function saveInning(){
-	url = "/games/" + $('.umpCount').attr("id");
-	data = {
-		home_score: $(".homeS").html(),
-		away_score: $(".awayS").html(),
-		inning: $(".inning").html()
+function saveInning(game){
+	var url = "/games/" + $('.umpCount').attr("id");
+	var data = {
+		home_score: game.homeScore,
+		away_score: game.awayScore,
+		inning: game.inning
 	};
 	$.ajax(url, {
 		method: 'PATCH',

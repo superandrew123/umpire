@@ -1,37 +1,30 @@
-<div id="<%= @game.id %>"class="umpCount">
-	<div class="firstRow">
-		<div class="strikesTr">Strikes
-			<p class="strikes"></p>
+<div id="<%= @game.id %>"class="umpCount container">
+	<div class="row">
+		<div class="strikesBox col-xs-6">Strikes
+			<p class="strikes">0</p>
 		</div>
-		<div class="ballsTr">Balls
+<!-- 		<div class="ballsBox">Balls
 			<p class="balls">0</p>
+		</div> -->
+		<div class="clear col-xs-6">CLEAR</div>
+	</div>
+	<div class="row">
+		<div class="outsBox col-xs-6">OUTS
+			<p class="outs">0</p>
 		</div>
-		<div class="clear">CLEAR
+		<div class="inningTr col-xs-6">INNING
+			<p class="inning"><%= @game.display_inning %></p>
+		</div>
+	</div>					
+	<div class="row">
+		<div class="awayBox col-xs-6"><p class="away names"><%= @game.away_name %></p>
+			<p class="awayS score"><%= @game.home_score %></p>
+		</div>			
+		<div class="homeBox col-xs-6"><p class="home names"><%= @game.home_name %></p>
+			<p class="homeS score"><%= @game.away_score %></p>
 		</div>
 	</div>
-<table>
-	<tr>
-		<td class="outsTr">OUTS
-			<p class="outs">0</p>
-		</td>					
-		<td class="inningTr">INNING
-			<p class="inning"><%= @game.display_inning %></p>
-		</td>
-	</tr>
-	<tr>
-		<td class="awaySTr"><p class="away names"><%= @game.away_name %></p>
-			<p class="awayS score"><%= @game.home_score %></p>
-		</td>			
-		<td class="homeSTr"><p class="home names"><%= @game.home_name %></p>
-			<p class="homeS score"><%= @game.away_score %></p>
-		</td>
-
-	</tr>
-
-	
-	<tr>
-		<td class="reset">RESET</td>
-		<td class="enterNames">Name<br> Teams</td>
-	</tr>
-</table>
+	<div class="row">
+		<div class="reset">RESET</div>
+	</div>
 </div>
