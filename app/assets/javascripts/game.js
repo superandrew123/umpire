@@ -1,6 +1,9 @@
+
 $(document).ready(function(){
 	setListeners();
 });
+
+
 
 function setListeners(){
 	$(".strikesBox").click(tapStrike);
@@ -61,4 +64,3 @@ function tapHome(){
 	score++;
 	$(".homeS").html(score);
 }
-
