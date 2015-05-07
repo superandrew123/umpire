@@ -6,8 +6,11 @@
 	text-align: center;
 }
 .row {
-	height: 25%;
+	height: 20%;
 }
 .container div {
 	padding: 16px;
+}
+td, th {
+  padding: 8px 16px 0 8px;
 }
