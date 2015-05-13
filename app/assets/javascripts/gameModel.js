@@ -12,5 +12,8 @@ function Game(){
 Game.games = [];
 
 Game.prototype.insertValues = function(){
-	debugger;
+	$(".outs").html(this.outs);
+	$(".awayS").html(this.awayScore);
+	$(".homeS").html(this.homeScore);
+	$(".inning").html(this.inning);
 };

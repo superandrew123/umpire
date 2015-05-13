@@ -38,8 +38,9 @@ function tapOut(){
 	if(outs == 3){
 		increaseInning();
 		outs = 0;
+	} else {
+		new Game();
 	}
-	new Game();
 	tapClear();
 	$(".outs").html(outs);
 }
@@ -65,15 +66,19 @@ function tapAway(){
 	var score = $(".awayS").html();
 	score++;
 	$(".awayS").html(score);
+	new Game();
 }
 
 function tapHome(){
 	var score = $(".homeS").html();
 	score++;
 	$(".homeS").html(score);
+	new Game();
 }
 
 function tapUndo(){
-	var game = Game.games.pop();
-	game.insertValues();
+	if (Game.games.length > 0){
+		var game = Game.games.pop();
+		game.insertValues();
+	}
 }
