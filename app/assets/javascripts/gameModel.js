@@ -7,6 +7,10 @@ function Game(){
 	this.inning = $(".inning").html();
 	//Game.games will be used for queuing 'undo' actions
 	Game.games.push(this);
-}
+};
 
 Game.games = [];
+
+Game.prototype.insertValues = function(){
+	debugger;
+};

@@ -39,6 +39,7 @@ function tapOut(){
 		increaseInning();
 		outs = 0;
 	}
+	new Game();
 	tapClear();
 	$(".outs").html(outs);
 }
@@ -73,5 +74,6 @@ function tapHome(){
 }
 
 function tapUndo(){
-	debugger;
+	var game = Game.games.pop();
+	game.insertValues();
 }
