@@ -52,33 +52,34 @@ function increaseInning(){
 		inning[0] = "Bot ";
 		$(".inning").html(inning);
 		game.inning = inning[0] + inning[1];
-		saveInning(game);
 	}else {
 		inning[0] = "Top ";
 		inning[1]++;
 		$(".inning").html(inning);
 		game.inning = inning[0] + inning[1];
-		saveInning(game);
 	};
+	saveInning(game);
 }
 
 function tapAway(){
 	var score = $(".awayS").html();
 	score++;
-	$(".awayS").html(score);
 	new Game();
+	$(".awayS").html(score);
 }
 
 function tapHome(){
 	var score = $(".homeS").html();
 	score++;
-	$(".homeS").html(score);
 	new Game();
+	$(".homeS").html(score);
 }
 
 function tapUndo(){
 	if (Game.games.length > 0){
 		var game = Game.games.pop();
 		game.insertValues();
+	} else {
+		console.log("No moves to undo")
 	}
 }
