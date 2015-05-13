@@ -9,10 +9,7 @@
 		<div class="strikesBox col-xs-6">Strikes
 			<p class="strikes">0</p>
 		</div>
-<!-- 		<div class="ballsBox">Balls
-			<p class="balls">0</p>
-		</div> -->
-		<div class="clear col-xs-6">CLEAR</div>
+		<div class="clear col-xs-6"><p>CLEAR STRIKES</p></div>
 	</div>
 	<div class="row">
 		<div class="outsBox col-xs-6">OUTS
@@ -31,6 +28,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="reset"><%= link_to("Back", root_path) %></div>
+		<div class="undo col-xs-6"><p>UNDO</p> </div>
+		<div class="reset col-xs-6"><p> <%= link_to("Back", root_path) %></p></div>
 	</div>
 </div>

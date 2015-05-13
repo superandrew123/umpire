@@ -20,6 +20,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @source = "show"
   end
 
   def update

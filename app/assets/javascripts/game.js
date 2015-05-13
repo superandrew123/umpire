@@ -14,6 +14,7 @@ function setListeners(){
 	$(".outsBox").on("tap", tapOut);
 	$(".awayBox").on("tap", tapAway);
 	$(".homeBox").on("tap", tapHome);
+	$(".undo").on("tap", tapUndo)
 	$(".deleteGame h3").click(destroyGame);
 };
 
@@ -48,6 +49,8 @@ function increaseInning(){
 	if (inning[0] == "Top") {
 		inning[0] = "Bot ";
 		$(".inning").html(inning);
+		game.inning = inning[0] + inning[1];
+		saveInning(game);
 	}else {
 		inning[0] = "Top ";
 		inning[1]++;
@@ -67,4 +70,8 @@ function tapHome(){
 	var score = $(".homeS").html();
 	score++;
 	$(".homeS").html(score);
+}
+
+function tapUndo(){
+	debugger;
 }

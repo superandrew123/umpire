@@ -3,10 +3,14 @@
 	height: 580px;
 	font-size: 24px;
 	text-align: center;
+
 }
 
-.row {
-	height: 20%;
+.umpCount div div{
+	border: 1px solid black;
+}
+.row div{
+
 }
 
 .container div {
@@ -15,4 +19,8 @@
 
 td, th {
   padding: 8px 16px 0 8px;
+  width: 25%;
+}
+table {
+	width: 100%;
 }

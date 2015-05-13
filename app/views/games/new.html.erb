@@ -1,7 +1,7 @@
 <%= form_for @game do |game| %>
 	<%= game.label :home_name %>
-	<%= game.text_field :home_name %>
+	<%= game.text_field :home_name %><br>
 	<%= game.label :away_name %>
-	<%= game.text_field :away_name %>
+	<%= game.text_field :away_name %><br>
 	<%= game.submit "Start Game" %>
 <% end %>
