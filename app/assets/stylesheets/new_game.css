@@ -24,3 +24,6 @@ td, th {
 table {
 	width: 100%;
 }
+.names {
+  overflow: scroll;
+}

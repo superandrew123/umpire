@@ -1,21 +1,18 @@
 $(document).ready(function(){
-	checkNames();
-	setListeners();
+	$(".deleteGame h3").click(destroyGame);
 });
 
-function checkNames(){
-	// Check length of name and shorten if it's too much
-	
-};
+$(".games.show").ready(function(){
+	setGameListeners();
+})
 
-function setListeners(){
+function setGameListeners(){
 	$(".strikesBox").on("tap", tapStrike);
 	$(".clear").on("tap", tapClear);
 	$(".outsBox").on("tap", tapOut);
 	$(".awayBox").on("tap", tapAway);
 	$(".homeBox").on("tap", tapHome);
 	$(".undo").on("tap", tapUndo)
-	$(".deleteGame h3").click(destroyGame);
 };
 
 function tapStrike(){

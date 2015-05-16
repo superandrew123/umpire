@@ -26,11 +26,11 @@
 //   		} else if (home.length > 10) {
 //       	$(".home").css('font-size', '80%');			
 // 		}	
-// 		if (away.length > 5) {
-//       	$(".away").css('font-size', '90%');
-//   		} else if (away.length > 10) {
-//       	$(".away").css('font-size', '80%');			
-// 		}
+		// if (away.length > 5) {
+  //     	$(".away").css('font-size', '90%');
+  // 		} else if (away.length > 10) {
+  //     	$(".away").css('font-size', '80%');			
+		// }
 
 // 		$(".splash").fadeOut();
 // 		$(".umpCount").fadeIn();
