@@ -26,4 +26,5 @@ table {
 }
 .names {
   overflow: scroll;
+  white-space: nowrap;
 }
