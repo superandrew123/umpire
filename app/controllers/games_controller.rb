@@ -1,8 +1,8 @@
 class GamesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:index]
   
   def index
-    @games = current_user.games
+    @games = Game.all.reverse
   end
 
   def new

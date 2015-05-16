@@ -8,6 +8,8 @@
 			<div class="col-xs-6 col-md-3">
 			<% if current_user %>
 				<%= link_to "log out", destroy_user_session_path, method: :delete %>
+			<% else %>
+				<%= link_to "log in", new_user_session_path %>
 			<% end %>
 			</div>
 		</div>

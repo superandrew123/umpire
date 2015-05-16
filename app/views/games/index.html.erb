@@ -5,12 +5,17 @@
 	<table>	
 		<% @games.each do |game| %>
 		<tr>
-		<table id=<%= game.id %> class="gameData">
+		<table id="<%= game.id %>" class="gameData">
+			<tr>
+				<td colspan="2"><%= game.created_at.strftime("%l:%M %p - %b %d, %Y")%></td>
+			</tr>
 			<tr>
 				<td><%= game.home_name %></td>
 				<td><%= game.away_name %></td>
 				<td><%= link_to("Resume", game_path(game)) %></td>
-				<td class="deleteGame" rowspan="2"><a><h3> X </h3></a></td>
+				<% if current_user %>
+					<td class="deleteGame" rowspan="2"><a><h3> X </h3></a></td>
+				<% end %>
 			</tr>
 			<tr>
 				<td><%= game.home_score %></td>
