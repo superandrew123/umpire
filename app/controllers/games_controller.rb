@@ -10,7 +10,7 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.new
+    @game = Game.create
     @game.home_name = params[:game][:home_name]
     @game.away_name = params[:game][:away_name]
     @game.user_id = current_user.id
