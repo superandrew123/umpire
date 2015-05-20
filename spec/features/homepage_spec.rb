@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+# methods in test_helper.rb: log_in(user)
+
 describe "Visit /,", type: :feature do
   before(:each) do
     Game.create(user_id: 1, home_name: "People's Court", away_name: "Bad Guys")
@@ -22,15 +24,19 @@ describe "Visit /,", type: :feature do
     end
   end
 
-
-  context "user signs in," do
-    it "clicks log in and goes to the log in page" do 
+  describe "clicks log in" do
+    it "goes to log in page" do
       visit root_path
       click_link('log in')
-      fill_in('Email', with: @user.email)
-      fill_in('Password', with: @user.password)
-      find('[value="Log in"]').click
+      expect(current_path).to eq("/users/sign_in")
+    end
+
+    it "logs in and goes back to root page and show the New Game and log out link" do
+      log_in(@user)
+      expect(current_path).to eq("/")
       expect(page).to have_content("New Game")
+      expect(page).to_not have_content("log in")
+      expect(page).to have_content("log out")
     end
   end
 end
