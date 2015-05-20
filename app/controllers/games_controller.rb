@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index]
+  before_filter :authenticate_user!, :except => [:index, :show]
   
   def index
     @games = Game.all.reverse
@@ -26,6 +26,11 @@ class GamesController < ApplicationController
   def update
     # updates the score every new inning
     @game = Game.find(params[:id])
+    if @game.user_id != current_user.id
+      # temporary fix to prevent people from modifying games
+      # they are did not start
+      redirect_to root_path
+    end
     @game.away_score = params[:away_score]
     @game.home_score = params[:home_score]
     @game.read_inning(params[:inning])

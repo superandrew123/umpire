@@ -8,19 +8,25 @@ describe "Visit /,", type: :feature do
     @user = User.create(email: "test@email.net", password: "password")
   end
 
-  context "no user signed in," do 
-    it "opens homepage and shows all games" do
-      visit root_path
-      expect(page).to have_content("Games:")
-      expect(page).to have_content("People's Court")
-      expect(page).to have_content("Bad Guys")
-      expect(page).to have_content("Resume")
+  context "no user signed in," do
+    describe "root page" do 
+      it "opens homepage and shows all games" do
+        visit root_path
+        expect(page).to have_content("Games:")
+        expect(page).to have_content("People's Court")
+        expect(page).to have_content("Bad Guys")
+      end
     end
+    describe "cannot resume games without being logged in" do
+      it "resume is gone" do 
+        visit root_path
+        expect(page).to_not have_content("Resume")
+      end
 
-    it "cannot resume games without being logged in" do
-      visit root_path
-      click_link('Resume', match: :first)
-      expect(current_path).to eq("/users/sign_in")
+      it "watch is on the page" do 
+        visit root_path
+        expect(page).to have_content("Watch")
+      end
     end
   end
 
@@ -35,6 +41,7 @@ describe "Visit /,", type: :feature do
       log_in(@user)
       expect(current_path).to eq("/")
       expect(page).to have_content("New Game")
+      expect(page).to have_content("Resume")
       expect(page).to_not have_content("log in")
       expect(page).to have_content("log out")
     end

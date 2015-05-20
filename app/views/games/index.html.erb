@@ -12,7 +12,7 @@
 			<tr>
 				<td><%= game.home_name %></td>
 				<td><%= game.away_name %></td>
-				<td><%= link_to("Resume", game_path(game)) %></td>
+				<td><%= resume_watch(game) %></td>
 				<% if current_user %>
 					<td class="deleteGame" rowspan="2"><a><h3> X </h3></a></td>
 				<% end %>
