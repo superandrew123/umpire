@@ -30,15 +30,16 @@ class GamesController < ApplicationController
 
   def update
     # updates the score every new inning
-    @game = Game.find(params[:id])
+    binding.pry
+    @game = Game.find(game_params[:id])
     if @game.user_id != current_user.id
-      # temporary fix to prevent people from modifying games
+      # prevent people from modifying games
       # they are did not start
       redirect_to root_path
     end
-    @game.away_score = params[:away_score]
-    @game.home_score = params[:home_score]
-    @game.read_inning(params[:inning])
+    @game.away_score = game_params[:away_score]
+    @game.home_score = game_params[:home_score]
+    @game.read_inning(game_params[:inning])
     @game.save
     render nothing: true
   end
@@ -48,5 +49,10 @@ class GamesController < ApplicationController
     @game.destroy if current_user.id == @game.user_id
     render nothing: true
   end
+
+  private
+    def game_params
+      params.require(:game).permit(:id, :outs, :home_score, :away_score, :inning)
+    end
 
 end

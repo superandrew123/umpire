@@ -1,4 +1,5 @@
 function Game(){
+	this.id = $('.umpCount').attr("id");
 	this.outs = $(".outs").html();
 	this.awayName = $(".away").html();
 	this.homeName = $(".home").html();
