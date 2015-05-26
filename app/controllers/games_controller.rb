@@ -20,7 +20,12 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
-    @source = !!current_user ? "show" : "watch"
+    user = User.find(@game.user_id)
+    if current_user == user
+      @source = "show"
+    else
+      @source = "watch" 
+    end
   end
 
   def update
