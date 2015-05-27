@@ -12,7 +12,7 @@
 	</div>
 	<div class="row">
 		<div class="outsBox col-xs-6">OUTS
-			<p class="outs">0</p>
+			<p class="outs"><%= @game.outs %></p>
 		</div>
 		<div class="inningTr col-xs-6">INNING
 			<p class="inning"><%= @game.display_inning %></p>
@@ -20,10 +20,10 @@
 	</div>					
 	<div class="row">
 		<div class="awayBox col-xs-6"><p class="away names"><%= @game.away_name %></p>
-			<p class="awayS score"><%= @game.home_score %></p>
+			<p class="awayS score"><%= @game.away_score %></p>
 		</div>			
 		<div class="homeBox col-xs-6"><p class="home names"><%= @game.home_name %></p>
-			<p class="homeS score"><%= @game.away_score %></p>
+			<p class="homeS score"><%= @game.home_score %></p>
 		</div>
 	</div>
 	<div class="row">

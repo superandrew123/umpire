@@ -18,4 +18,16 @@ class Game < ActiveRecord::Base
       self.inning = (inning[1].to_i * 2)
     end
   end
+
+  def my_game?(user)
+    user.id == self.user_id if user != nil
+  end
+
+  def display_outs
+    if self.outs < 2
+      "#{self.outs} out"
+    else
+      "#{self.outs} outs"
+    end
+  end
 end

@@ -29,17 +29,19 @@ class GamesController < ApplicationController
   end
 
   def update
-    # updates the score every new inning
+    # updates the score every out
+    binding.pry
     @game = Game.find(game_params[:id])
-    if !my_game?(@game)
-      # prevent people from modifying games
-      # they are did not start
-      redirect_to root_path
+    if !@game.my_game?(current_user)
+      # prevent someone from modifying games
+      # they did not start
+    else
+      @game.outs = game_params[:outs]
+      @game.away_score = game_params[:away_score]
+      @game.home_score = game_params[:home_score]
+      @game.read_inning(game_params[:inning])
+      @game.save
     end
-    @game.away_score = game_params[:away_score]
-    @game.home_score = game_params[:home_score]
-    @game.read_inning(game_params[:inning])
-    @game.save
     render nothing: true
   end
 
@@ -53,5 +55,4 @@ class GamesController < ApplicationController
     def game_params
       params.require(:game).permit(:id, :outs, :home_score, :away_score, :inning)
     end
-
 end

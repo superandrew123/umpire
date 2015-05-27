@@ -1,28 +1,29 @@
 <div class="container">
 <div class="col-md-2 col-xs-0"></div>
 <div class="col-xs-12 col-md-6">
-	<h3>Games: </h3>
+	<h4>Games: </h4>
 	<table>	
 		<% @games.each do |game| %>
 		<tr>
 		<table id="<%= game.id %>" class="gameData">
 			<tr>
-				<td colspan="2"><%= game.created_at.strftime("%l:%M %p - %b %d, %Y")%></td>
+				<td colspan="4"><%= game.created_at.strftime("%l:%M %p - %b %d, %Y")%></td>
 			</tr>
 			<tr>
 				<td><%= game.home_name %></td>
 				<td><%= game.away_name %></td>
 				<td><%= resume_watch(game) %></td>
-				<% if my_game?(game) %>
-					<td class="deleteGame" rowspan="2"><a><h3> X </h3></a></td>
+				<% if game.my_game?(current_user) %>
+					<td class="deleteGame"><a><h5> X </h5></a></td>
 				<% else %>
-					<td rowspan="2"><a><h3></h3></a></td>
+					<td><a><h3></h3></a></td>
 				<% end %>
 			</tr>
 			<tr>
 				<td><%= game.home_score %></td>
 				<td><%= game.away_score %></td>
 				<td><%= game.display_inning %></td>
+				<td><%= game.display_outs %></td>
 			</tr>
 		</table>
 		</tr>

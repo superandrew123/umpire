@@ -10,8 +10,4 @@ module ViewHelper
     end
   end
 
-  def my_game?(game)
-    current_user.id == game.user_id
-  end
-
 end
