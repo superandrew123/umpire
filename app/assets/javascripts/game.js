@@ -55,7 +55,7 @@ function increaseInning(){
 		$(".inning").html(inning);
 		game.inning = inning[0] + inning[1];
 	};
-	saveInning(game);
+	saveGame(game);
 }
 
 function tapAway(){

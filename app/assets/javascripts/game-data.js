@@ -1,4 +1,4 @@
-function saveInning(game){
+function saveGame(game){
 	var url = "/games/" + $('.umpCount').attr("id");
 	var data = {
 		game: {

@@ -30,7 +30,6 @@ class GamesController < ApplicationController
 
   def update
     # updates the score every new inning
-    binding.pry
     @game = Game.find(game_params[:id])
     if @game.user_id != current_user.id
       # prevent people from modifying games
