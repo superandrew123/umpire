@@ -8,6 +8,7 @@ This is my rails based Umping application. It's optimized for mobile. Log in to 
   2. Save data on outs instead of innings
   3. Reorganize javascript files
   4. Add updater javascript function for 'watch' page
+* Fix delete button
 * Update team names from within game
 * Add a refresh button to root page
 * Style update

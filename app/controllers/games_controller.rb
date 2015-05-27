@@ -31,7 +31,7 @@ class GamesController < ApplicationController
   def update
     # updates the score every new inning
     @game = Game.find(game_params[:id])
-    if @game.user_id != current_user.id
+    if !my_game?(@game)
       # prevent people from modifying games
       # they are did not start
       redirect_to root_path
@@ -45,7 +45,7 @@ class GamesController < ApplicationController
 
   def destroy
     @game = Game.find(params[:id])
-    @game.destroy if current_user.id == @game.user_id
+    @game.destroy if my_game?(@game)
     render nothing: true
   end
 

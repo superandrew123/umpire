@@ -13,8 +13,10 @@
 				<td><%= game.home_name %></td>
 				<td><%= game.away_name %></td>
 				<td><%= resume_watch(game) %></td>
-				<% if current_user %>
+				<% if my_game?(game) %>
 					<td class="deleteGame" rowspan="2"><a><h3> X </h3></a></td>
+				<% else %>
+					<td rowspan="2"><a><h3></h3></a></td>
 				<% end %>
 			</tr>
 			<tr>

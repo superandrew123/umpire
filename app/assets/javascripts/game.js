@@ -40,6 +40,8 @@ function tapOut(){
 	}
 	tapClear();
 	$(".outs").html(outs);
+	var game = new Game();
+	saveGame(game);
 }
 
 function increaseInning(){
