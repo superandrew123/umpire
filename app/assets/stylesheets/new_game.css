@@ -12,6 +12,13 @@
 .row div{
 
 }
+.nameTeams p {
+  font-size: 16px;
+  margin-top: 6px;
+}
+.nameTeams {
+
+}
 
 .container div {
 	padding: 16px;

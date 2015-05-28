@@ -12,7 +12,8 @@ function setGameListeners(){
 	$(".outsBox").on("tap", tapOut);
 	$(".awayBox").on("tap", tapAway);
 	$(".homeBox").on("tap", tapHome);
-	$(".undo").on("tap", tapUndo)
+	$(".undo").on("tap", tapUndo);
+	$(".nameTeams").on("tap", nameTeams());
 };
 
 function tapStrike(){
@@ -81,4 +82,8 @@ function tapUndo(){
 	} else {
 		console.log("No moves to undo")
 	}
+}
+
+function nameTeams() {
+	
 }
