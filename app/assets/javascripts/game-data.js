@@ -26,3 +26,16 @@ function destroyGame(){
 		}
 	});
 }
+
+function watchingGame(){
+	var game = new Game();
+	var data = {
+		game: {
+			id: game.id
+		}
+	}
+	$.ajax('/watch',{
+		method: 'GET',
+		data: data
+	})
+}

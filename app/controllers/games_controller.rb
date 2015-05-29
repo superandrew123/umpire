@@ -30,7 +30,6 @@ class GamesController < ApplicationController
 
   def update
     # updates the score every out
-    binding.pry
     @game = Game.find(game_params[:id])
     if !@game.my_game?(current_user)
       # prevent someone from modifying games
@@ -49,6 +48,13 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     @game.destroy if my_game?(@game)
     render nothing: true
+  end
+
+  def watch
+    @game = Game.find(game_params[:id])
+    respond_to do |format|
+      format.js { }
+    end
   end
 
   private

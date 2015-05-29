@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  
+  get 'watch' => 'games#watch'
+
   root 'games#index'
 
 
