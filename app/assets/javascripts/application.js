@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery_readyselector
+//= require lib/jquery_readyselector
 //= require_tree .
 
 // jquery Ready Selector for pages specific js
