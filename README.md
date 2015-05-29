@@ -1,11 +1,11 @@
 
 ##Kickball Umpire
-This is my rails based Umping application. It's optimized for mobile. Log in to create games. You can then ump games and save them to your account. 
+This is my rails based Umping application. It's optimized for mobile.
 
 Live at http://umping.heroku.com
 
 ##Features
-* Anyone can view all the games and watch games as their umped
+* Anyone can view all the games and watch games as they are umped
 * Creating an account and logging in allows a user to create games
 * Games are saved on each out. All games are viewable from the main page.
 
