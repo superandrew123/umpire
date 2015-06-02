@@ -1,8 +1,6 @@
 <div class="container">
-<div class="col-md-2 col-xs-0"></div>
 <div class="col-xs-12 col-md-6">
-	<h4>Games: </h4>
-	<table>	
+	<p class="games">games:</p>
 		<% @games.each do |game| %>
 		<tr>
 		<table id="<%= game.id %>" class="gameData">
@@ -28,6 +26,5 @@
 		</table>
 		</tr>
 		<% end %>
-	</table>	
 	</div>
 </div>

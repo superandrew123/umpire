@@ -1,99 +1,49 @@
-
-
-/*body {
-	background-color: black;
-	color: white;
-	width: 320px;
-}
-
-td {
-	font-size: 20px;
-	width: 320px;
-	height: 150px;
-}
-
-p {
-	font-size: 50px;
-}
-input {
-	font-size: 30px;
-	width: 250px;
-	color: black;
-
-}
-.topInput{
-	margin-top: 100px;
-	margin-bottom: 5px;
-}
-.names {
-
-}
-
-div {
-
-	margin: 0 auto;
-	text-align: center;
-}
-.invisible {
-	visibility: hidden;
-}
-.reset {
-  	text-align: center; 
-  	vertical-align: top;
-  	font-size: 30px;
-  	width: 100px;
-  	padding-bottom: 50px;
-  	padding-top: 10px;
-}
-.active {
-	color: red;
-}
-.splash {
-	position: fixed;
-	text-align: center;
-	width: 300px;
-	height: 580px;
-	opacity: 100;
-
-}
 .umpCount {
-	
-}
-.nameSubmit {
-	height: 100px;
-	width: 250px;
-	background-color: #B2B2B2;
-	font-size: 50px;
-	vertical-align: middle;
-	margin-bottom: 60px;
-	margin-top: 80px;
-}
-.enterNames {
+	width: 320px;
+	height: 580px;
+	font-size: 24px;
 	text-align: center;
-	vertical-align: top;
-	width: 100px;
-	font-size: 30px;
+
 }
-.firstRow {
-	height: 150px;
-	padding-top: 15px;
+
+.umpCount div div{
+	border: 1px solid black;
 }
-.clear {
-	vertical-align: middle;
-	height: 109px;
-	line-height: 109px;
-	font-size: 20px;
+
+.nameTeams p {
+  font-size: 16px;
+  margin-top: 6px;
 }
-.firstRow div {
-	float: left;
-	width: 100px;
+
+.nameTeams {
+
 }
-.strikesTr {
-	font-size: 20px;
+
+.container div {
+  padding: 16px 16px 0 16px;
+  margin-bottom: 0;
 }
-.ballsTr {
-	font-size: 20px;
+
+.container div table {
+  margin-bottom: 16px;
 }
-.inning {
-	font-size: 40px;
-}*/
+
+.navbar div {
+  margin-left: 16px;
+  padding: 0;
+}
+
+td, th {
+  padding: 8px 16px 0 8px;
+  width: 25%;
+}
+
+table {
+	width: 100%;
+  border: 1px solid grey;
+}
+
+.names {
+  overflow: scroll;
+  white-space: nowrap;
+}

@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index, :show]
+  before_filter :authenticate_user!, :except => [:index, :show, :watch]
   
   def index
     @games = Game.all.reverse
@@ -51,6 +51,8 @@ class GamesController < ApplicationController
   end
 
   def watch
+    # Allow users to watch games as they're being
+    # umped but does not allow games to be modified
     @game = Game.find(game_params[:id])
     respond_to do |format|
       format.js { }
