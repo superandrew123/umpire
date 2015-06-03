@@ -5,8 +5,8 @@ $(document).ready(function(){
   $(".gameData").click(selectGame);
   $("#select").click(hideSelect);
   // set absolute positioned div width
-  $(".selectGame").children(".selectButton").children(".watchButton").width($(".selectGame").width())
-  $(".selectGame").children(".selectButton").children(".myGame").width($(".selectGame").width())
+  $(".watchButton").width($(".selectGame").width())
+  setResumeWidth();
 });
 
 $(".games.show").ready(function(){
@@ -25,4 +25,12 @@ function selectGame(){
 
 function hideSelect(){
   $(this).hide()
+}
+function setResumeWidth(){
+  var width = $(".selectGame").width();
+  var resumeWidth = width * 0.7;
+  var deleteWidth = width * 0.3;
+  $(".resumeButton").width(resumeWidth);
+  $(".deleteGame").width(deleteWidth);
+  debugger;
 }

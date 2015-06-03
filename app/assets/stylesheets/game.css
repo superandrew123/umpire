@@ -34,6 +34,56 @@
   height: 80px;
 }
 
+.resumeButton {
+  background-color: blue;
+  height: 80px;
+  font-size: 32px;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+}
+
+.resumeButton a:hover {
+  color: white;
+  text-decoration: none;
+}
+.resumeButton a:visited {
+  color: white;
+  text-decoration: none;
+}
+.resumeButton a:link {
+  color: white;
+  text-decoration: none;
+}
+.resumeButton a:active {
+  color: white;
+  text-decoration: none;
+}
+.deleteGame {
+  background-color: red;
+  height: 80px;
+  font-size: 32px;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+}
+
+.deleteButton a:hover {
+  color: white;
+  text-decoration: none;
+}
+.deleteButton a:visited {
+  color: white;
+  text-decoration: none;
+}
+.deleteButton a:link {
+  color: white;
+  text-decoration: none;
+}
+.deleteButton a:active {
+  color: white;
+  text-decoration: none;
+}
 .watchButton {
   height: 80px;
   font-size: 48px;
