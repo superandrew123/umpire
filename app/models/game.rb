@@ -24,10 +24,6 @@ class Game < ActiveRecord::Base
   end
 
   def display_outs
-    if self.outs < 2
-      "#{self.outs} out"
-    else
-      "#{self.outs} outs"
-    end
+    "#{self.outs} out"
   end
 end

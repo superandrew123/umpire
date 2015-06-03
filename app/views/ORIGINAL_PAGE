@@ -1,3 +1,13 @@
+				<% if game.my_game?(current_user) %>
+					<td class="deleteGame"><a><h5> X </h5></a></td>
+				<% else %>
+					<td><a><h3></h3></a></td>
+				<% end %>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>

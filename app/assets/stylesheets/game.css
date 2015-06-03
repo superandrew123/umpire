@@ -19,18 +19,56 @@
 
 }
 
-.container div {
-  padding: 16px 16px 0 16px;
-  margin-bottom: 0;
+.selectGame {
+  position: relative;
+}
+
+.selectButton {
+  position: absolute;
+  height: 80px;
+  width: inherit;
+  display: none;
+}
+
+.myGame {
+  height: 80px;
+}
+
+.watchButton {
+  height: 80px;
+  font-size: 48px;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  background-color: green;
+}
+
+.watchButton a:hover {
+  color: white;
+  text-decoration: none;
+}
+.watchButton a:visited {
+  color: white;
+  text-decoration: none;
+}
+.watchButton a:link {
+  color: white;
+  text-decoration: none;
+}
+.watchButton a:active {
+  color: white;
+  text-decoration: none;
+}
+.smallText {
+  font-size: 10px;
 }
 
 .container div table {
   margin-bottom: 16px;
 }
 
-.navbar div {
-  margin-left: 16px;
-  padding: 0;
+.nav {
+  padding: 16px 0 0 16px;
 }
 
 td, th {
