@@ -1,9 +1,10 @@
 $(document).ready(function(){
 	// in game-data
-	$(".deleteGame h3").click(destroyGame);
+	$(".deleteGame").click(destroyGame);
 
   $(".gameData").click(selectGame);
   $("#select").click(hideSelect);
+  $(".resumeButton").click(hideResume);
   // set absolute positioned div width
   $(".watchButton").width($(".selectGame").width())
   setResumeWidth();
@@ -26,11 +27,14 @@ function selectGame(){
 function hideSelect(){
   $(this).hide()
 }
+
+function hideResume(){
+  $(this).parent().parent().hide()
+}
 function setResumeWidth(){
   var width = $(".selectGame").width();
   var resumeWidth = width * 0.7;
   var deleteWidth = width * 0.3;
   $(".resumeButton").width(resumeWidth);
   $(".deleteGame").width(deleteWidth);
-  debugger;
 }

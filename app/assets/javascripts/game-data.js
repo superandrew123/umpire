@@ -16,13 +16,13 @@ function saveGame(game){
 }
 
 function destroyGame(){
-	var $table = $(this).parents().eq(4)
-	var url = "/games/" + $('.gameData').attr("id");
+	var $table = $(this).parent().parent().next();
+	var url = "/games/" + $(this).parent().parent().next().attr("id");
 	var method = "DELETE";
 	$.ajax(url, {
 		method: method,
 		complete: function(){
-			$table.remove();
+			$table.parent().hide()
 		}
 	});
 }

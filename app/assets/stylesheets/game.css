@@ -3,7 +3,7 @@
 	height: 580px;
 	font-size: 24px;
 	text-align: center;
-
+  padding: 10px;
 }
 
 .umpCount div div{
@@ -60,6 +60,7 @@
   text-decoration: none;
 }
 .deleteGame {
+  color: white;
   background-color: red;
   height: 80px;
   font-size: 32px;
@@ -68,22 +69,6 @@
   display: table-cell;
 }
 
-.deleteButton a:hover {
-  color: white;
-  text-decoration: none;
-}
-.deleteButton a:visited {
-  color: white;
-  text-decoration: none;
-}
-.deleteButton a:link {
-  color: white;
-  text-decoration: none;
-}
-.deleteButton a:active {
-  color: white;
-  text-decoration: none;
-}
 .watchButton {
   height: 80px;
   font-size: 48px;
