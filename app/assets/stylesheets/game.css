@@ -7,9 +7,16 @@
 }
 
 .umpCount div div{
-	border: 1px solid black;
+	border: 1px solid gray;
 }
 
+.row {
+  /*margin: 20px 0 0 0;*/
+}
+
+.row div {
+  padding: 20px;
+}
 .nameTeams p {
   font-size: 16px;
   margin-top: 6px;
