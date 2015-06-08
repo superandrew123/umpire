@@ -46,7 +46,7 @@ class GamesController < ApplicationController
 
   def destroy
     @game = Game.find(params[:id])
-    @game.destroy if @game.my_game?(current_user)
+    @game.destroy if current_user && @game.my_game?(current_user)
     render nothing: true
   end
 
