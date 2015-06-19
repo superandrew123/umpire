@@ -17,7 +17,6 @@ Live at http://umping.heroku.com
 ##Next steps:
 
 * Update team names from within game page
-* Add a refresh button to root page
 * Style update
   1. jsRumble
-  2. color and fonts
+  2. color and font update
