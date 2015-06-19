@@ -10,10 +10,6 @@ Live at http://umping.heroku.com
 * Games are saved on each out. All games are viewable from the main page.
 * Watched games are updated with out refreshing
 
-
-##Current steps:
-* Fix ump page view
-
 ##Next steps:
 
 * Update team names from within game page
