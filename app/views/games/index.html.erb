@@ -2,29 +2,29 @@
 <div class="col-xs-12 col-md-6">
 	<p class="games">games:</p>
 		<% @games.each do |game| %>
-		<div class="selectGame">
-		<div id="select" class="selectButton">
-			<%= continue(game) %>
-		<!-- WATCH || RESUME|X -->
-		<!-- postion selectGame absolutely within an parent div -->
-		<!-- parent div needs to be relative, child absolute -->
-		</div>
-		<table id="<%= game.id %>" class="gameData">
-			<tr>
-				<td class="smallText" colspan="3"><%= game.created_at.strftime("%l:%M %p - %b %d, %Y")%></td>
-			</tr>
-			<tr>
-				<td class="smallText" ><%= game.home_name %></td>
-				<td class="smallText" ><%= game.away_name %></td>
-				<td><%= game.display_inning %></td>
-			</tr>
-			<tr>
-				<td><%= game.home_score %></td>
-				<td><%= game.away_score %></td>
-				<td><%= game.display_outs %></td>
-			</tr>
-		</table>
-		</div>
+			<div class="selectGame">
+			<div id="select" class="selectButton">
+				<%= continue(game) %>
+			<!-- WATCH || RESUME|X -->
+			<!-- postion selectGame absolutely within an parent div -->
+			<!-- parent div needs to be relative, child absolute -->
+			</div>
+			<table id="<%= game.id %>" class="gameData">
+				<tr>
+					<td class="smallText" colspan="3"><%= game.created_at.strftime("%l:%M %p - %b %d, %Y")%></td>
+				</tr>
+				<tr>
+					<td class="smallText" ><%= game.home_name %></td>
+					<td class="smallText" ><%= game.away_name %></td>
+					<td><%= game.display_inning %></td>
+				</tr>
+				<tr>
+					<td><%= game.home_score %></td>
+					<td><%= game.away_score %></td>
+					<td><%= game.display_outs %></td>
+				</tr>
+			</table>
+			</div>
 		<% end %>
 	</div>
 </div>
