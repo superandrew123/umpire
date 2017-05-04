@@ -24,6 +24,9 @@
     },
     "DATABASE_URL": {
       "generated": true
+    },
+    "STAGING_DATABASE_URL": {
+      "required": true
     }
   },
   "formation": {
