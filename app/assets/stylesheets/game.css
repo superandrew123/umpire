@@ -107,7 +107,9 @@ body {
 .smallText {
   font-size: 10px;
 }
-
+.container > .row {
+  background-color: white;
+}
 .container div table {
   margin-bottom: 16px;
 }
