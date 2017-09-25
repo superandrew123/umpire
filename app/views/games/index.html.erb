@@ -1,6 +1,9 @@
 <div class="container">
 <div class="col-xs-12 col-md-6">
 	<p class="games">games:</p>
+		<% redis = Redis.new %>
+		<p><%= redis.keys %></p>
+
 		<% if false # @games.each do |game| %>
 			<div class="selectGame">
 			<div id="select" class="selectButton">
