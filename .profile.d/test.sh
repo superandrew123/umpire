@@ -1,9 +1,10 @@
-echo "TEST TEST TEST"
-echo "TEST TEST TEST"
-echo "TEST TEST TEST"
-echo "TEST TEST TEST"
-echo "TEST TEST TEST"
-echo "TEST TEST TEST"
-echo "TEST TEST TEST"
-echo "TEST TEST TEST"
-echo "TEST TEST TEST"
+test="TEST TEST TEST"
+echo $test
+echo $test
+echo $test
+echo $test
+echo $test
+echo $test
+echo $test
+echo $test
+echo $test
