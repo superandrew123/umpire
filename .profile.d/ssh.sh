@@ -1,6 +1,6 @@
 # open ssh connection to EC2 instance
 
-touch $1/fohr_andrew.pem
+touch ./fohr_andrew.pem
 
 echo "-----BEGIN RSA PRIVATE KEY-----" >> $1/fohr_andrew.pem
 cat $REDIS_ARM >> $1/fohr_andrew.pem
