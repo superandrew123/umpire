@@ -2,7 +2,7 @@
 
 touch ./fohr_andrew.pem
 
-echo "" >> ./fohr_andrew.pem
+# echo "" >> ./fohr_andrew.pem
 cat <<EOF > ./fohr_andrew.pem
 -----BEGIN RSA PRIVATE KEY-----
 $REDIS_ARM
