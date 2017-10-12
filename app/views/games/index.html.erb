@@ -3,7 +3,7 @@
 	<p class="col-md-12 games">games:</p>
 	<div class="col-md-12">
 		<p>
-			<%=	$redis.sdiff('ones','twos','threes','fives').sort {|n,m| m.to_i <=> n.to_i }.join(', ') %>
+			<%=	$redis.sdiff('ones','twos','threes','fives','sevens').length %>
 		</p>
 	</div>
 		<% if false # @games.each do |game| %>
