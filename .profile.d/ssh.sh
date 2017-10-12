@@ -5,7 +5,7 @@ echo "       Creating pem"
 echo "-----BEGIN RSA PRIVATE KEY-----" >> fohr_andrew.pem
 echo $REDIS_ARM
 echo $REDIS_ARM >> fohr_andrew.pem
-echo "" >> fohr_andrew.pem
+# echo "" >> fohr_andrew.pem
 echo "-----END RSA PRIVATE KEY-----" >> fohr_andrew.pem
 echo "       Created pem"
 
